@@ -12,6 +12,32 @@
 
 当前是研究原型：已有三维分割可直接使用；本包不含 ToothFairy3 / ToothSeg 推理程序和模型权重。平台、朝根方的中轴线和颊侧方向仍需调用者提供可靠信息。SVD 仅提供位姿候选，不能当作已经验证的自动平台识别；多种植体时需明确选择目标。当前尚未实现无需这些信息即可完成的全自动流程。
 
+### 主代码在哪里，如何调用
+
+**核心测量代码是 [postop_cbct/segmentation_measurement_3d.py](postop_cbct/segmentation_measurement_3d.py)，核心函数是 `run_case()`。** 它接收已经读取的三维种植体与颌骨掩膜、NIfTI affine 和几何配置，完成四个高度的测量。
+
+| 文件 | 作用 | 主要入口 |
+| --- | --- | --- |
+| [segmentation_measurement_3d.py](postop_cbct/segmentation_measurement_3d.py) | 牙弓方向、测量剖面、三维射线与骨边缘距离计算 | `run_case()` |
+| [pipeline.py](postop_cbct/pipeline.py) | 读取 NIfTI、核对坐标和单位、调用核心算法、保存结果；多标签分割的准备 | `measure_case()` / `prepare_case()` |
+| [cli.py](postop_cbct/cli.py) | 解析命令行参数并选择运行流程 | `main()` |
+| [__main__.py](postop_cbct/__main__.py) | 让 `python -m postop_cbct` 调用命令行入口 | 调用 `cli.main()` |
+| [visualization.py](postop_cbct/visualization.py) | 将三维数据提取的剖面和测量线绘制成图 | `plot_measurement()` |
+| [io.py](postop_cbct/io.py) | 配置路径解析、NIfTI 读写、三维输入和单位检查 | 输入输出辅助函数 |
+
+执行测量时的调用顺序：
+
+```text
+python -m postop_cbct measure 配置.json --output 结果目录 --plot
+    → __main__.py
+    → cli.main()
+    → pipeline.measure_case()
+    → segmentation_measurement_3d.run_case()
+    → 保存测量结果；指定 --plot 时绘图
+```
+
+想研究或修改测量算法，先阅读 `segmentation_measurement_3d.py`；想实际运行病例，使用下文的命令即可，无需直接运行这个核心文件。准备输入的 `prepare` 命令走 `pipeline.prepare_case()`，不执行测量。所有测量输入均来自三维数据，不读取医生截图或人工标注 JSON。
+
 ## 2. 安装与合成示例
 
 需要 Python 3.11 或更高版本。解压后进入本 README 所在目录。
@@ -110,3 +136,6 @@ python -m unittest discover -s tests -v
 
 验证内容和适用边界见 `VALIDATION.md`，几何定义见 `docs/METHODS.md`。医生截图与 JSON 可在独立的研究评估流程中作为参考标准；本包不加载或解析这些人工标注。
 
+## 7. v0.3.0 修改
+
+移除了 `annotate2d`、`measure2d` 命令及其标注适配器、二维测量模块和对应测试。保留三维几何测量和由三维数据生成的剖面展示；不改变四个高度及距离定义。请用本版本替换旧分享包。
