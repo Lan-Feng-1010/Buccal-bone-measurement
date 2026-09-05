@@ -110,6 +110,3 @@ python -m unittest discover -s tests -v
 
 验证内容和适用边界见 `VALIDATION.md`，几何定义见 `docs/METHODS.md`。医生截图与 JSON 可在独立的研究评估流程中作为参考标准；本包不加载或解析这些人工标注。
 
-## 7. v0.3.0 修改
-
-移除了 `annotate2d`、`measure2d` 命令及其标注适配器、二维测量模块和对应测试。保留三维几何测量和由三维数据生成的剖面展示；不改变四个高度及距离定义。请用本版本替换旧分享包。
