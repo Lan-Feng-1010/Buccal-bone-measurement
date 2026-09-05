@@ -1,0 +1,17 @@
+{
+  "case_id": "CASE001",
+  "reference_cbct_nifti": "../data/CASE001/cbct.nii.gz",
+  "toothfairy3_nifti": "../data/CASE001/toothfairy3.nii.gz",
+  "toothseg_nifti": "../data/CASE001/toothseg.nii.gz",
+  "implant_label": 10,
+  "jaw_label": 2,
+  "jaw": "upper",
+  "target_component_id": null,
+  "target_fdi": null,
+  "platform_ras": null,
+  "axis_apical_ras": null,
+  "arch_tangent_ras": null,
+  "buccal_hint_ras": null,
+  "orientation_source": "replace_with_actual_geometry_source",
+  "max_search_mm": 20
+}

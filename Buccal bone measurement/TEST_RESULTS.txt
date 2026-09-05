@@ -1,0 +1,38 @@
+test_legacy_annotation_modules_absent (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_legacy_annotation_modules_absent) ... ok
+test_moved_case_and_different_working_directory (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_moved_case_and_different_working_directory) ... ok
+test_non_3d_nifti_rejected (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_non_3d_nifti_rejected) ... ok
+test_only_volume_workflow_commands (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_only_volume_workflow_commands) ... ok
+test_prepare_preserves_anonymous_id_and_target (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_prepare_preserves_anonymous_id_and_target) ... ok
+test_slice_display_values_do_not_control_distances (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_slice_display_values_do_not_control_distances) ... ok
+test_units_require_matching_mm_reference (test_3d_only_interface.ThreeDOnlyInterfaceTest.test_units_require_matching_mm_reference) ... ok
+test_anisotropic_affine_uses_mm (test_independent_3d.Independent3DReview.test_anisotropic_affine_uses_mm) ... ok
+test_axis_inside_implant_hole_measures_outer_not_inner_boundary (test_independent_3d.Independent3DReview.test_axis_inside_implant_hole_measures_outer_not_inner_boundary) ... ok
+test_confirmed_pose_not_blocked_by_horizontal_svd_proposal (test_independent_3d.Independent3DReview.test_confirmed_pose_not_blocked_by_horizontal_svd_proposal) ... ok
+test_disjoint_bone_is_ambiguous (test_independent_3d.Independent3DReview.test_disjoint_bone_is_ambiguous) ... ok
+test_field_limit_is_not_outer_boundary (test_independent_3d.Independent3DReview.test_field_limit_is_not_outer_boundary) ... ok
+test_half_open_coronal_boundary_refers_for_review_without_shift (test_independent_3d.Independent3DReview.test_half_open_coronal_boundary_refers_for_review_without_shift) ... ok
+test_implant_reentry_is_ambiguous (test_independent_3d.Independent3DReview.test_implant_reentry_is_ambiguous) ... ok
+test_no_bone_is_null_not_zero (test_independent_3d.Independent3DReview.test_no_bone_is_null_not_zero) ... ok
+test_oblique_affine_preserves_physical_distance (test_independent_3d.Independent3DReview.test_oblique_affine_preserves_physical_distance) ... ok
+test_oblique_ray_exact_voxel_exit (test_independent_3d.Independent3DReview.test_oblique_ray_exact_voxel_exit) ... ok
+test_one_voxel_thin_bone_is_not_skipped (test_independent_3d.Independent3DReview.test_one_voxel_thin_bone_is_not_skipped) ... ok
+test_run_case_rejects_nonfinite_and_nonbinary_masks (test_independent_3d.Independent3DReview.test_run_case_rejects_nonfinite_and_nonbinary_masks) ... ok
+test_run_case_reports_four_heights_but_no_clinical_release (test_independent_3d.Independent3DReview.test_run_case_reports_four_heights_but_no_clinical_release) ... ok
+test_search_limit_is_not_outer_boundary (test_independent_3d.Independent3DReview.test_search_limit_is_not_outer_boundary) ... ok
+test_section_basis_contains_axis_and_is_normal_to_projected_arch (test_independent_3d.Independent3DReview.test_section_basis_contains_axis_and_is_normal_to_projected_arch) ... ok
+test_slice_pixel_transform_matches_sampling_coordinates (test_independent_3d.Independent3DReview.test_slice_pixel_transform_matches_sampling_coordinates) ... ok
+test_arch_evaluated_at_implant (test_segmentation_measurement_3d.ThreeDTest.test_arch_evaluated_at_implant) ... ok
+test_buccal_plane_orthogonal (test_segmentation_measurement_3d.ThreeDTest.test_buccal_plane_orthogonal) ... ok
+test_fov_truncation_null (test_segmentation_measurement_3d.ThreeDTest.test_fov_truncation_null) ... ok
+test_hole_then_bone_not_zero (test_segmentation_measurement_3d.ThreeDTest.test_hole_then_bone_not_zero) ... ok
+test_missing_platform_returns_proposal_not_truth (test_segmentation_measurement_3d.ThreeDTest.test_missing_platform_returns_proposal_not_truth) ... ok
+test_no_bone_null (test_segmentation_measurement_3d.ThreeDTest.test_no_bone_null) ... ok
+test_rigid_affine_invariance (test_segmentation_measurement_3d.ThreeDTest.test_rigid_affine_invariance) ... ok
+test_search_truncation_null (test_segmentation_measurement_3d.ThreeDTest.test_search_truncation_null) ... ok
+test_thin_single_voxel_bone_not_skipped (test_segmentation_measurement_3d.ThreeDTest.test_thin_single_voxel_bone_not_skipped) ... ok
+test_two_bone_intervals_null (test_segmentation_measurement_3d.ThreeDTest.test_two_bone_intervals_null) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 1.602s
+
+OK

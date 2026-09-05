@@ -1,0 +1,15 @@
+{
+  "case_id": "CASE001",
+  "target_implant_mask_nifti": "../data/CASE001/target_implant.nii.gz",
+  "jaw_mask_nifti": "../data/CASE001/jaw.nii.gz",
+  "reference_cbct_nifti": "../data/CASE001/cbct.nii.gz",
+  "jaw": "upper",
+  "target_fdi": null,
+  "platform_ras": null,
+  "axis_apical_ras": null,
+  "arch_tangent_ras": null,
+  "same_jaw_tooth_centers_ras": null,
+  "buccal_hint_ras": null,
+  "orientation_source": "replace_with_actual_geometry_source",
+  "max_search_mm": 20
+}
